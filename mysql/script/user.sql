@@ -1,0 +1,9 @@
+CREATE USER IF NOT EXISTS 'mbauser'@'%' IDENTIFIED BY 'mbauser';
+
+CREATE DATABASE IF NOT EXISTS mbadb;
+
+ALTER DATABASE mbadb
+  DEFAULT CHARACTER SET utf8
+  DEFAULT COLLATE utf8_general_ci;
+
+GRANT ALL PRIVILEGES ON mbadb.* TO 'mbauser'@'%' IDENTIFIED BY 'mbauser';
